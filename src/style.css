@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+body, html{
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
+
+.app{
+  position: relative;
+}
+
+body {
+  padding: 0rem 10rem;
+
+}
+
+.wrapper {
+  position: absolute;
+  width: 100%;
+  
+}
+
+h2{
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 400;
+  margin: 0;
+  margin-top: 1rem;
+}
+form {
+  display: flex;
+  justify-content: center;
+}
+
+#input{
+  border: 2px solid darkgray;
+  font-size: 1.5rem;
+  color: gray;
+  padding: .5rem 2rem;
+  margin-top: 1rem;
+}
+
+
+
+.container {
+  position: absolute;
+  border: 2px solid black;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+  padding: 1rem;
+  z-index: 6;
+  transition: all .2s linear;
+  border: 2px solid darkgray;
+  margin-top: 2rem;
+}
+
+.container.blur {
+  filter: blur(.15rem);
+}
+
+.header {
+  transition: all .2s linear;
+}
+
+.header.blur {
+  filter: blur(.15rem);
+}
+
+
+.image-container img{
+  display:block;
+  cursor:pointer;
+}
+
+
+.image{
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.hidden-image{
+  display: none;
+  position: absolute;
+}
+
+.btn-wrapper{
+  position: absolute;
+  width: 100%;
+  bottom: -5em;
+  display: flex;
+  justify-content: center;
+ padding-bottom: -2.5rem;
+}
+#btn-show{
+  border: 2px solid gray;
+
+  width: 200px;
+  font-size: 1.4rem;
+  display: flex;
+  align-self: center;
+  align-content:center;
+  justify-content: center;
+
+}
+.show-more-div{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.show-more-div span{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: 1.25rem;
+}
+
+.hidden-image.active{
+  display: block;
+  position:fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 70%;
+  height: 70%;
+  padding: 2rem;
+  border: 2px solid gray;
+  background-color: white;
+  z-index: 10;
+}
+
+.modal-image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.btn-close-modal{
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+}
+
+.overlay {
+  position: fixed;
+  transition: all .2s linear;
+  background-color: rgba(0, 0,0,0.25);
+
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 8;
+  opacity: 0;
+  display: none;
+  
+}
+
+.overlay.show {
+  transition: all .2s linear;
+  display: block;
+}
+
+.overlay.show.visually {
+  transition: all .2s linear;
+  opacity: 1;
+  
+}
